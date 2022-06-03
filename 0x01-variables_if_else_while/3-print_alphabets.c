@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point
  * Description - alphabet in lowercase, uppercase, new line
@@ -15,12 +16,12 @@ int main(void)
 		alpha++;
 	}
 
-	char alpha = 'A';
+	char alphac = 'A';
 
-	while (alpha <= 'Z')
+	while (alphac <= 'Z')
 	{
-		putchar(alpha);
-		alpha++;
+		putchar(alphac);
+		alphac++;
 	}
 	putchar('\n');
 
