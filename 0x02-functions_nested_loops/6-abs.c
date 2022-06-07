@@ -3,7 +3,6 @@
  * _abs - Entry point
  * Desc - computes the absolute value of an integer
  * @r: integer checked
- * @int: integer 
  * Return: int
  */
 int _abs(int r)
