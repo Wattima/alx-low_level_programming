@@ -2,7 +2,8 @@
 /**
  * _abs - Entry point
  * Desc - computes the absolute value of an integer
- * @int: integer checked
+ * @r: integer checked
+ * @int: integer 
  * Return: int
  */
 int _abs(int r)
