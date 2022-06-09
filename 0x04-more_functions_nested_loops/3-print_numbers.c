@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <unistd.h>
 /**
  * print_numbers - Entry point
  * prints the numbers, from 0 to 9
