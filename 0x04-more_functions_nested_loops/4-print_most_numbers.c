@@ -4,6 +4,7 @@
  * Do not print 2 and 4
  * Return: Numbers
  */
+void print_most_numbers(void)
 {
 	int num;
 
