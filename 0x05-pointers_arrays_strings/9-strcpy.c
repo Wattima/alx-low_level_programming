@@ -6,7 +6,7 @@
  * Return: string
  */
 char *_strcpy(char *dest, char *src)
-
+{
 	int n = 0;
 	int i;
 
