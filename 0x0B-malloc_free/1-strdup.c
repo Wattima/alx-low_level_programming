@@ -1,52 +1,31 @@
 #include "main.h"
-/**
- * _strlen - give the length of a string
- * @s: the string
- *
- * Return: the length of a string
- */
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0 ; s[i] != '\0' ; i++)
-		;
-	return (i);
-}
-#include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
- * _strdup - returns a pointer which contains a copy of the string
- * given as a parameter
- * @str: The string to print
- *
- *
- * Return: a pointer to the duplicated string or NULL if insufficient
- * memory was available
+ * _strdup - Entry point
+ * @str: string we need to duplicate
+ * Return: a pointer to the duplicated string or NULL
  */
 char *_strdup(char *str)
 {
-	int i;
-	char *copy;
+	char *strnew = NULL;
+	unsigned int i;
+	int n;
 
-	if (str == '\0')
+	if (str == NULL)
+		return (NULL);
+	for (n = 0; str[n] != '\0'; n++)
+		;
+	strnew = (char *)malloc(n + 1 * sizeof(char));
+	if (strnew != NULL)
 	{
-		return ('\0');
-	}
-	i = _strlen(str);
-	copy = malloc(sizeof(char) * i + 1);
-	if (copy == '\0')
+		for (i = 0; str[i] != '\0'; i++)
+			strnew[i] = str[i];
+	} else
 	{
-		return ('\0');
+		return (NULL);
 	}
-	else
-	{
-		for (i = 0 ; str[i] != '\0' ; i++)
-		{
-			copy[i] = str[i];
-		}
-	}
-	copy[i] = '\0';
-	return (copy);
+	strnew[i] = '\0';
+	return (strnew);
 }
