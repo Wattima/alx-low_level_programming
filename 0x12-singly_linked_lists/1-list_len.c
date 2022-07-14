@@ -1,18 +1,23 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * list_len - finds the number of elements in a linked list
- * @h: pointer to the start of the linked list
+ * list_len - returns number of nodes starting at element h
  *
- * Return: number of elements in the linked list
+ * @h: first node of linked list to count from
+ *
+ * Return: number of nodes printed
  */
 size_t list_len(const list_t *h)
 {
-	const list_t *tmp;
-	unsigned int i;
+	size_t len = 0;
 
-	tmp = h;
-	for (i = 0; tmp; i++)
-		tmp = tmp->next;
-	return (i);
+	if (h == NULL)
+		return (0);
+	while (h != NULL)
+	{
+		len++;
+		h = h->next;
+	}
+	return (len);
 }
